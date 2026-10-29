@@ -1,0 +1,68 @@
+University of Rajshahi
+
+Department of Computer Science and Engineering
+
+B.Sc. Engineering Part-4 Odd Semester Practical Examination-2025
+
+Course: CSE4142 (Microcontroller Interfacing Lab)
+
+Time: 3 Hours
+
+Marks: 25
+
+1. Use 8086 Interfacing Trainer in Kit mode to make a traffic controlling system with three LEDs as the representing light of Red, Green, and Yellow color light. Here the lights will be displayed according to the following sequence and time periods.
+
+
+
+Red light $\rightarrow$ Yellow light $\rightarrow$ Green light $\rightarrow$ Yellow light $\rightarrow$ Red light
+
+Red light will be displayed for 10 seconds, Yellow light for 5 seconds and Green light for 15 seconds. The output will be continued until the system is reset.
+
+2. Use 8086 Interfacing Trainer in Kit mode to display letters E, F, and H in an 8x8 dot matrix LED with a delay of 5 seconds between each display. The output will be continued until the system is reset.
+
+
+3. Use 8086 Interfacing Trainer in Kit mode to display digits 1, 2, and 3 in a 7-Segment LED with a delay of 5 seconds between each display. The output will be continued until the system is reset.
+
+
+4. **Bidirectional Bare-Metal SPI Half-Duplex Communication Between Two STM32F446xx NUCLEO-F446RE Boards.**
+
+
+**Objective**
+To design and implement a bidirectional, bare-metal SPI half-duplex data transfer protocol between two STM32F446xx NUCLEO-F446RE boards (one configured as Master, the other as Slave) without using HAL libraries.
+
+
+The system must satisfy these requirements:
+
+
+
+* When the Master board switch (PC13) is pressed, it transmits a command over the single-wire data line that toggles the Slave board LED (PA5).
+
+
+* When the Slave board switch (PC13) is pressed, it signals the Master, swapping the data direction so that a command is sent back to toggle the Master board LED (PA5).
+
+
+
+5. **Bare-Metal I2C Half-Duplex Communication Between Two STM32F446xx NUCLEO-F446RE Boards.**
+
+
+**Objective**
+To design and implement a half-duplex bidirectional I2C communication system between two STM32F446xx NUCLEO-F446RE (one configured as Master, the other as Slave) using bare-metal C programming. The system will exchange control signals to toggle on-board LEDs using on-board user push-buttons.
+
+
+The communication workflow must satisfy the following requirements:
+
+
+
+* When the Master board's User Switch (PC13) is pressed, the Master sends a data byte (0x01) to the Slave. Upon receiving this byte, the Slave board's User LED (PA5) must blink 3 times.
+
+
+* When the Slave board's User Switch (PC13) is pressed, the Slave must wait for the Master to request data. The Master must periodically poll or check the slave (or use an external trigger line). When the Master reads a data byte (0x02) from the Slave, the Master board's User LED (PA5) must blink 3 times.
+
+
+https://github.com/MdMurad-102/stm32
+
+
+
+https://github.com/nazmulhasan77/Communication-Protocols-I2C-UART-
+
+https://7i.se/U
